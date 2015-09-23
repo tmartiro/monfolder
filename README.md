@@ -1,6 +1,6 @@
 ## monfolder
 
-This version is monitor mount point for a new file creation. The program figures out even if file is created in subdirectories (recursive way). When file is created it executes specified script which was passed as an argument to binary. 
+This version is monitor mount point for a new file creation. The program supports recursive monitoring of file creation. When file is created the program executes specified script which was passed itself as an argument. 
 
 It uses linux kernel  fanotify API for monitoring events. [http://man7.org/linux/man-pages/man7/fanotify.7.html]
 
