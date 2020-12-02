@@ -226,7 +226,7 @@ static int initialize_fanotify (int argc, const char **argv)
 
   monitors[0].path = strdup (argv[1]);
   /* Add new fanotify mark */
-  if (fanotify_mark (fanotify_fd, FAN_MARK_ADD | FAN_MARK_MOUNT, event_mask, AT_FDCWD, monitors[0].path) < 0)
+  if (fanotify_mark (fanotify_fd, FAN_MARK_ADD , event_mask, AT_FDCWD, monitors[0].path) < 0)
   {
       fprintf (stderr, "Couldn't add monitor in mount '%s': '%s'\n", monitors[0].path, strerror (errno));
       return -1;
